@@ -1,0 +1,88 @@
+    html {
+      background-color: #cccccc;
+    }
+    body {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+      color: #242424;
+      font-family: Tahoma, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* ชื่อหนังสือพิมพ์ */
+    .masthead {
+      border-bottom: 4px double #222;
+      text-align: center;
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: 48px;
+    }
+
+    .date {
+      color: #666;
+    }
+
+    /* จัดข่าวหลักและข่าวรองให้อยู่คนละคอลัมน์ */
+    .news-grid {
+      display: grid;
+      grid-template-columns: 2fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    article,
+    aside {
+      padding: 16px;
+      border: 1px solid #ccc;
+      background-color: #ffffff;
+    }
+
+    .secondary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    /* เส้นแบ่งซ้ายของข่าวที่ 2, 3, 4 */
+      .secondary article + article {
+      
+      padding-left: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #9b1c1c;
+    }
+
+    .secondary-item {
+        flex: 1 1 200px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .secondary-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    }
+    .lead-photo {
+        width: min(100%, 560px);
+        margin: 20px auto;
+        text-align: center;
+    }
+    .lead-photo img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+      @media (max-width: 650px) {
+    .masthead h1 {
+        font-size: 34px;
+    }
+
+    .secondary-item {
+        flex-basis: 100%;
+    }
+    
+}
